@@ -28,10 +28,10 @@ function sendGetAddressForm() {
 
   cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
   // console.log(cells);
-  for (var i = 1; i < sh.getLastRow(); i++) {
-    // if (cells[i][5] == "") {
-    //   break;
-    // }
+  for (let i = 1; i < sh.getLastRow(); i++) {
+    if (cells[i][5] == "") {
+      break;
+    }
     // console.log(i + "行目", cells[i][0]);
 
     let name = getName(sh, i);
@@ -75,7 +75,7 @@ function sendSafetyConfForm() {
 
   cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
   // console.log(cells);
-  for (var i = 1; i < sh.getLastRow(); i++) {
+  for (let i = 1; i < sh.getLastRow(); i++) {
     if (cells[i][5] == "") {
       break;
     }
