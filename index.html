@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base target="_top">
+</head>
+
+<body>
+	<h2>安否確認システム　管理画面</h2>
+  <p>
+    <h3> 連絡先登録フォーム送信</h3>
+    <input type="button" id="sendAddrFrm" value="連絡先入力フォームを送信"/>
+  </p>
+  <p>
+    <h3>安否確認フォーム送信</h3>
+    <input type="button" id="sendSafetyFrm" value="安否確認入力フォーム送信"/>
+  </p>
+  <p>
+    <p id="return"/>
+  </p>
+</body>
+
+<script>
+
+  let sendAddrFrm = document.getElementById("sendAddrFrm");
+  let sendSafetyFrm = document.getElementById("sendSafetyFrm");
+
+  function showReturnValue(returnString){
+    console.log("returnString" + returnString);
+    google.script.run.userSleep(1000);
+    document.getElementById('return').innerHTML = returnString;
+  }
+
+  function showFailure(returnString) {
+    google.script.run.userSleep(1000);
+    document.getElementById('return').innerHTML = '送信結果 : Failure';
+  }
+
+  sendAddrFrm.addEventListener('click', function() {
+    google.script.run
+      .withSuccessHandler(showReturnValue)
+      .withFailureHandler(showFailure)
+      .sendGetAddressForm();
+  })
+
+  sendSafetyFrm.addEventListener('click', function() {
+    google.script.run
+      .withSuccessHandler(showReturnValue)
+      .withFailureHandler(showFailure)
+      .sendSafetyConfForm();
+  })
+
+</script>
+
+</html>
