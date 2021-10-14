@@ -20,21 +20,21 @@ function sendGetAddressForm() {
   // }
 
   // get sheet
-  var ss = SpreadsheetApp.openById("11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ");
-  var sh = ss.getSheetByName("送信先"); // 
+  let ss = SpreadsheetApp.openById("11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ");
+  let sh = ss.getSheetByName("送信先"); // 
 
   // return values
   let ret = [];
 
   cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
-  console.log(cells);
+  // console.log(cells);
   for (var i = 1; i < sh.getLastRow(); i++) {
     // if (cells[i][5] == "") {
     //   break;
     // }
-    console.log(i + "行目", cells[i][0]);
+    // console.log(i + "行目", cells[i][0]);
 
-    let name = sh.getRange("A:A").getValues()[i] + sh.getRange("B:B").getValues()[i];
+    let name = getName(sh, i);
     ret.push(name);
 
     // set the recipient, the email address is corporate's.
@@ -51,6 +51,8 @@ function sendGetAddressForm() {
       + '-----------------------------------------------<br>'
       + '<a href="' + url + '">連絡先登録フォーム</a><br>'
       + '-----------------------------------------------<br></p>'
+      + '<p>上記リンクを開いてもうまく表示できない場合は、<br>'
+      + '<u>件名・本文を変更せずに</u>ご返信をお願い致します。</p>'
       + '<p>※このメールは自動送信されています。<br>'
       + '========================================</p>';
     GmailApp.sendEmail(recip, title, content, {
@@ -65,20 +67,20 @@ function sendGetAddressForm() {
 function sendSafetyConfForm() {
 
   // get sheet
-  var ss = SpreadsheetApp.openById("11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ");
-  var sh = ss.getSheetByName("送信先"); // 
+  let ss = SpreadsheetApp.openById("11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ");
+  let sh = ss.getSheetByName("送信先"); // 
 
   // return values
   let ret = [];
 
   cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
-  console.log(cells);
+  // console.log(cells);
   for (var i = 1; i < sh.getLastRow(); i++) {
     if (cells[i][5] == "") {
       break;
     }
 
-    let name = sh.getRange("A:A").getValues()[i] + sh.getRange("B:B").getValues()[i];
+    let name = getName(sh, i);
     ret.push(name)
 
     let recip = cells[i][5];
@@ -95,6 +97,9 @@ function sendSafetyConfForm() {
       + '-----------------------------------------------<br>'
       + '<a href="' + url + '">安否確認入力フォーム</a><br>'
       + '-----------------------------------------------<br></p>'
+      + '<p>上記リンクを開いてもうまく表示できない場合は、<br>'
+      + '下記事項についてご返信をお願い致します。<br>'
+      + '</p>'
       + '<p>※このメールは地震発生の地域が居住地又は勤務地である方に自動送信されています。<br>'
       + '========================================</p>';
     GmailApp.sendEmail(recip, title, content, {
@@ -104,6 +109,10 @@ function sendSafetyConfForm() {
   }
 
   return ret.join("\n")
+}
+
+function getName(sh, idx) {
+  return sh.getRange("A:A").getValues()[idx] + sh.getRange("B:B").getValues()[idx];
 }
 
 /**
