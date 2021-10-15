@@ -1,5 +1,5 @@
 FROM node:latest
-WORKDIR /workdir
+WORKDIR /workspace
 RUN yarn global add @google/clasp
-COPY package.json yarn.lock /workdir/
 RUN yarn install
+COPY . /workspace/

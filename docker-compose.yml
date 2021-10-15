@@ -6,5 +6,5 @@ services:
       - .:/safety_confirmation
       - ./.clasprc.json:/root/.clasprc.json
       - /safety_confirmation/node_modules
-    working_dir: /workdir
+    working_dir: /workspace
     command: tail -f /dev/null

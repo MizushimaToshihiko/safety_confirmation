@@ -26,26 +26,26 @@ function sendGetAddressForm() {
   // return values
   let ret = [];
 
-  cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
   // console.log(cells);
   for (let i = 1; i < sh.getLastRow(); i++) {
-    if (cells[i][5] == "") {
+
+    // set the recipient, the email address is corporate's.
+    let recip = getTestRecip(sh, i);
+    if (recip == "") {
       break;
     }
     // console.log(i + "行目", cells[i][0]);
 
+    // get the name 
     let name = getName(sh, i);
     ret.push(name);
-
-    // set the recipient, the email address is corporate's.
-    let recip = cells[i][5];
 
     // "https://docs.google.com/forms/d/e/1FAIpQLScE-3XqVKry-qo193xKnicIy3mkJ5wB7gzYzVdlf-92Dt0POg/viewform?usp=pp_url&entry.517384846=%E7%B7%8F%E5%8B%99%E9%83%A8%E3%80%80%E6%B0%B4%E5%B3%B6%E4%BF%8A%E5%BD%A6" 質問1事前入力URL
 
     let title = "【安否確認ｼｽﾃﾑ】緊急連絡先の登録をお願い致します";
     let url = "https://docs.google.com/forms/d/e/1FAIpQLScE-3XqVKry-qo193xKnicIy3mkJ5wB7gzYzVdlf-92Dt0POg/viewform?"
-      + 'entry.517384846=' + cells[i][4] + ' ' + name;
-    let content = '<p>' + sh.getRange("A:A").getValues()[i] + cells[i][2] + cells[i][3]
+      + 'entry.517384846=' + getSec(sh, i) + ' ' + name;
+    let content = '<p>' + getFname(sh, i) + getMPos(sh, i) + getHTitle(sh, i)
       + '<br><br>日々の業務大変お疲れ様です。</p>'
       + '<p> 下記の「連絡先登録」リンクを開いて連絡先を登録して下さい<br>'
       + '-----------------------------------------------<br>'
@@ -73,24 +73,23 @@ function sendSafetyConfForm() {
   // return values
   let ret = [];
 
-  cells = sh.getRange(1, 1, sh.getLastRow(), sh.getLastColumn()).getValues();
   // console.log(cells);
   for (let i = 1; i < sh.getLastRow(); i++) {
-    if (cells[i][5] == "") {
+
+    let recip = getTestRecip(sh. i);
+    if (recip == "") {
       break;
     }
 
     let name = getName(sh, i);
     ret.push(name)
 
-    let recip = cells[i][5];
-
     // "https://docs.google.com/forms/d/e/1FAIpQLSdFGvVb7M9Y7qZG98fFWb7CYXchtQgN5pyQd9hmGcgEOsnejg/viewform?usp=pp_url&entry.1051334773=%E7%B7%8F%E5%8B%99%E9%83%A8%E3%80%80%E6%B0%B4%E5%B3%B6%E4%BF%8A%E5%BD%A6" 質問1事前入力URL
 
     let title = "【安否確認ｼｽﾃﾑ】安否情報の入力をお願い致します";
     let url = "https://docs.google.com/forms/d/e/1FAIpQLSdFGvVb7M9Y7qZG98fFWb7CYXchtQgN5pyQd9hmGcgEOsnejg/viewform?"
-      + 'entry.1051334773=' + cells[i][4] + ' ' + name;
-    let content = '<p>' + sh.getRange("A:A").getValues()[i] + cells[i][2] + cells[i][3]
+      + 'entry.1051334773=' + getSec(sh, i) + ' ' + name;
+    let content = '<p>' + getFname(sh, i) + getMPos(sh, i) + getHTitle(sh, i)
       + '<br><br>日々の業務大変お疲れ様です。</p>'
       + '<p> 只今震度5以上の地震が発生しました。<br>'
       + '下記「安否確認入力フォーム」リンクから安否情報の入力をお願い致します。<br>'
@@ -111,8 +110,39 @@ function sendSafetyConfForm() {
   return ret.join("\n")
 }
 
+// get the name 
 function getName(sh, idx) {
   return sh.getRange("A:A").getValues()[idx] + sh.getRange("B:B").getValues()[idx];
+}
+
+// get the name of section they belongs
+function getSec(sh, idx) {
+  return sh.getRange("F:F").getValues()[idx];
+}
+
+// get the family name
+function getFname(sh, idx) {
+  return sh.getRange("B:B").getValues()[idx];
+}
+
+// get the managial positions
+function getMPos(sh, idx) {
+  return sh.getRange("D:D").getValues()[idx];
+}
+
+// get the honorific title
+function getHTitle(sh, idx) {
+  return sh.getRange("E:E").getValues()[idx];
+}
+
+// get the mail address of the recipient
+function getRecip(sh, idx) {
+  return sh.getRange("G:G").getValues()[idx];
+}
+
+// get the mail address of the recipient for test.
+function getTestRecip(sh, idx) {
+  return sh.getRange("K:K").getValues()[idx];
 }
 
 /**
