@@ -87,8 +87,10 @@ function sendSafetyConfForm() {
     // "https://docs.google.com/forms/d/e/1FAIpQLSdFGvVb7M9Y7qZG98fFWb7CYXchtQgN5pyQd9hmGcgEOsnejg/viewform?usp=pp_url&entry.1051334773=%E7%B7%8F%E5%8B%99%E9%83%A8%E3%80%80%E6%B0%B4%E5%B3%B6%E4%BF%8A%E5%BD%A6" 質問1事前入力URL
 
     let title = "【安否確認ｼｽﾃﾑ】安否情報の入力をお願い致します";
+
     let url = "https://docs.google.com/forms/d/e/1FAIpQLSdFGvVb7M9Y7qZG98fFWb7CYXchtQgN5pyQd9hmGcgEOsnejg/viewform?"
       + 'entry.1051334773=' + getSec(sh, i) + ' ' + name;
+      
     let content = '<p>' + getFname(sh, i) + getMPos(sh, i) + getHTitle(sh, i)
       + '<br><br>日々の業務大変お疲れ様です。</p>'
       + '<p> 只今震度5以上の地震が発生しました。<br>'
