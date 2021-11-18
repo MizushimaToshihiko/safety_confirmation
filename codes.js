@@ -90,7 +90,7 @@ function sendSafetyConfForm() {
 
     let url = "https://docs.google.com/forms/d/e/1FAIpQLSdFGvVb7M9Y7qZG98fFWb7CYXchtQgN5pyQd9hmGcgEOsnejg/viewform?"
       + 'entry.1051334773=' + getSec(sh, i) + ' ' + name;
-      
+
     let content = '<p>' + getFname(sh, i) + getMPos(sh, i) + getHTitle(sh, i)
       + '<br><br>日々の業務大変お疲れ様です。</p>'
       + '<p> 只今震度5以上の地震が発生しました。<br>'
