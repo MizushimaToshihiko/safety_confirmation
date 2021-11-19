@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" lang="ja">
+  <title>高頻度（地震火山）</title>
+  <subtitle>JMAXML publishing feed</subtitle>
+  <updated>2021-11-12T10:49:11+09:00</updated>
+  <id>http://www.data.jma.go.jp/developer/xml/feed/eqvol.xml#short_1636681751</id>
+  <link rel="related" href="http://www.jma.go.jp/"/>
+  <link rel="self" href="http://www.data.jma.go.jp/developer/xml/feed/eqvol.xml"/>
+  <link rel="hub" href="http://alert-hub.appspot.com/"/>
+  <rights type="html"><![CDATA[
+<a href="http://www.jma.go.jp/jma/kishou/info/coment.html">利用規約</a>,
+<a href="http://www.jma.go.jp/jma/en/copyright.html">Terms of Use</a>
+]]></rights>
+  <entry>
+    <title>噴火に関する火山観測報</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211112014833_0_VFVO52_400000.xml</id>
+    <updated>2021-11-12T01:48:31Z</updated>
+    <author>
+      <name>福岡管区気象台　鹿児島地方気象台</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211112014833_0_VFVO52_400000.xml"/>
+    <content type="text">【火山名　諏訪之瀬島　噴火に関する火山観測報】火　　山：諏訪之瀬島
+日　　時：2021年11月12日10時40分（120140UTC）
+現　　象：噴火</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111230030_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T23:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111230030_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　阿蘇山　降灰予報（定時）】　現在、阿蘇山は噴火警戒レベル３（入山規制）です。阿蘇山で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111230035_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T23:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111230035_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　桜島　降灰予報（定時）】　現在、桜島は噴火警戒レベル３（入山規制）です。桜島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111230039_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T23:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111230039_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　薩摩硫黄島　降灰予報（定時）】　現在、薩摩硫黄島は噴火警戒レベル２（火口周辺規制）です。薩摩硫黄島で噴火が発生した場合には、１２日０９時から１２時までは火口から南東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111230042_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T23:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111230042_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　口永良部島　降灰予報（定時）】　現在、口永良部島は噴火警戒レベル２（火口周辺規制）です。口永良部島で噴火が発生した場合には、１２日０９時から１２時までは火口から南東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111230046_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T23:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111230046_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　諏訪之瀬島　降灰予報（定時）】　現在、諏訪之瀬島は噴火警戒レベル３（入山規制）です。諏訪之瀬島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>震源・震度に関する情報</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111222501_0_VXSE53_270000.xml</id>
+    <updated>2021-11-11T22:25:01Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111222501_0_VXSE53_270000.xml"/>
+    <content type="text">【震源・震度情報】１２日０７時２１分ころ、地震がありました。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111200030_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T20:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111200030_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　阿蘇山　降灰予報（定時）】　現在、阿蘇山は噴火警戒レベル３（入山規制）です。阿蘇山で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111200035_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T20:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111200035_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　桜島　降灰予報（定時）】　現在、桜島は噴火警戒レベル３（入山規制）です。桜島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111200038_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T20:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111200038_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　薩摩硫黄島　降灰予報（定時）】　現在、薩摩硫黄島は噴火警戒レベル２（火口周辺規制）です。薩摩硫黄島で噴火が発生した場合には、１２日０９時から１２時までは火口から南東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111200042_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T20:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111200042_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　口永良部島　降灰予報（定時）】　現在、口永良部島は噴火警戒レベル２（火口周辺規制）です。口永良部島で噴火が発生した場合には、１２日０９時から１２時までは火口から南東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111200045_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T20:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111200045_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　諏訪之瀬島　降灰予報（定時）】　現在、諏訪之瀬島は噴火警戒レベル３（入山規制）です。諏訪之瀬島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向、１２日２１時から２４時までは火口から南東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111170030_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T17:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111170030_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　阿蘇山　降灰予報（定時）】　現在、阿蘇山は噴火警戒レベル３（入山規制）です。阿蘇山で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111170034_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T17:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111170034_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　桜島　降灰予報（定時）】　現在、桜島は噴火警戒レベル３（入山規制）です。桜島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111170038_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T17:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111170038_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　薩摩硫黄島　降灰予報（定時）】　現在、薩摩硫黄島は噴火警戒レベル２（火口周辺規制）です。薩摩硫黄島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111170041_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T17:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111170041_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　口永良部島　降灰予報（定時）】　現在、口永良部島は噴火警戒レベル２（火口周辺規制）です。口永良部島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+  <entry>
+    <title>降灰予報（定時）</title>
+    <id>http://www.data.jma.go.jp/developer/xml/data/20211111170045_0_VFVO53_010000.xml</id>
+    <updated>2021-11-11T17:00:00Z</updated>
+    <author>
+      <name>気象庁</name>
+    </author>
+    <link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/20211111170045_0_VFVO53_010000.xml"/>
+    <content type="text">【火山名　諏訪之瀬島　降灰予報（定時）】　現在、諏訪之瀬島は噴火警戒レベル３（入山規制）です。諏訪之瀬島で噴火が発生した場合には、１２日０９時から１２時までは火口から東方向に降灰が予想されます。</content>
+  </entry>
+</feed>
