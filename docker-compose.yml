@@ -3,8 +3,8 @@ services:
   gas:
     build: .
     volumes:
-      - .:/safety_confirmation
+      - .:/workspace
       - ./.clasprc.json:/root/.clasprc.json
-      - /safety_confirmation/node_modules
+      - /workspace/node_modules
     working_dir: /workspace
     command: tail -f /dev/null

@@ -21,7 +21,7 @@ function sendGetAddressForm() {
 
   // get sheet
   let ss = SpreadsheetApp.openById("11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ");
-  let sh = ss.getSheetByName("送信先"); // 
+  let sh = ss.getSheetByName("送信先"); // 11ZuWJjgVMbiL_xfk0BSlgPYbfodop1CGStJDYJkQ0vQ
 
   // return values
   let ret = [];

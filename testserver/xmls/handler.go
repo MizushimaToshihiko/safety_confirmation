@@ -35,14 +35,13 @@ func WeatherHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func countQuakeXmls(dir string) ([]string, error) {
+func globQuakeXmls(dir string) ([]string, error) {
 	return filepath.Glob(dir + "/32-35_??_??_100*.xml")
 }
 
-// result function returns the result of Omikuji if 'i' is bitween 0 and 5, or a empty string.
-// If 't' is the first three days of the new year, result function returns always '大吉'
+// result function returns the contents in a xml file.
 func result() (string, int, error) {
-	xmlPaths, err := countQuakeXmls("./jmaxml_20210730_Samples")
+	xmlPaths, err := globQuakeXmls("./jmaxml_20210730_Samples")
 	if err != nil {
 		return "", 404, err
 	}
@@ -74,7 +73,7 @@ func readFile(f *os.File) (string, error) {
 		return "", err
 	}
 	if n == 0 {
-		return "", fmt.Errorf("couldn't read the file")
+		return "", fmt.Errorf("the xml file is empty")
 	}
 	return res.String(), nil
 }
