@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"bytes"
 )
 
 // var resOmikuji = [4]string{"大吉", "中吉", "小吉", "凶"}
@@ -29,11 +30,13 @@ func WeatherHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), code)
 	}
 	w.Header().Add("Status Code", "200 OK")
-	fmt.Fprint(w, res)
+	if _, err := fmt.Fprint(w, res); err != nil {
+		http.Error(w, err.Error(), 500)
+	}
 }
 
 func countQuakeXmls(dir string) ([]string, error) {
-	return filepath.Glob(dir + "/32-35*.xml")
+	return filepath.Glob(dir + "/32-35_??_??_100*.xml")
 }
 
 // result function returns the result of Omikuji if 'i' is bitween 0 and 5, or a empty string.
@@ -41,9 +44,10 @@ func countQuakeXmls(dir string) ([]string, error) {
 func result() (string, int, error) {
 	xmlPaths, err := countQuakeXmls("./jmaxml_20210730_Samples")
 	if err != nil {
-		log.Println("Error: ", err)
+		return "", 404, err
 	}
-	f, err := os.OpenFile(xmlPaths[rand.Intn(len(xmlPaths))], os.O_RDONLY, os.ModePerm)
+	idx := rand.Intn(len(xmlPaths))
+	f, err := os.OpenFile(xmlPaths[idx], os.O_RDONLY, os.ModePerm)
 	if err != nil {
 		return "", 404, err
 	}
@@ -53,28 +57,24 @@ func result() (string, int, error) {
 		}
 	}()
 
+	log.Println("open:", xmlPaths[idx])
+
 	res, err := readFile(f)
 	if err != nil {
 		return "", 500, err
 	}
 
-	log.Println(res)
-
 	return res, 200, nil
 }
 
 func readFile(f *os.File) (string, error) {
-	buf := make([]byte, 64)
-	res := make([]byte, 64)
-	for {
-		n, err := f.Read(buf)
-		if n == 0 {
-			break
-		}
-		res = append(res, buf...)
-		if err != nil && err != io.EOF {
-			return "", err
-		}
+	res := &bytes.Buffer{}
+	n, err := io.Copy(res, f)
+	if err != nil {
+		return "", err
 	}
-	return string(res), nil
+	if n == 0 {
+		return "", fmt.Errorf("couldn't read the file")
+	}
+	return res.String(), nil
 }
