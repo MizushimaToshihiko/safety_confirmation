@@ -7,8 +7,11 @@ function getEarthQuake() {
   
   var atom = XmlService.getNamespace('http://www.w3.org/2005/Atom');
   // var feedUrl = 'http://www.data.jma.go.jp/developer/xml/feed/eqvol.xml';
-  // var feedRes = UrlFetchApp.fetch(feedUrl).getContentText();
-  let feedRes = "http://localhost:8080/"
+  let feedUrl = "http://localhost:8080";
+  let optons = {
+    'useIntranet': true
+  }
+  var feedRes = UrlFetchApp.fetch(feedUrl, optons).getContentText();
   var feedDoc = XmlService.parse(feedRes);
   var feedXml = feedDoc.getRootElement();
   var feedLocs = getElementsByTagName(feedXml, 'entry'); // xmlに含まれるentry要素を配列で取得する
